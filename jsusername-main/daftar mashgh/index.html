@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>please enter your ussername and password</p>
+    <input id="uname" />
+    <input id="pwd" />
+    <button onclick="myfunction()">Login</button>
+    <p id="validation"></p>
+    <script>
+      function myfunction() {
+        let username = "mohammadfrpr";
+        let password = 123456;
+        let uname = document.getElementById("uname").value;
+        let pwd = document.getElementById("pwd").value;
+        if (
+          username.length >= 8 &&
+          uname.toLowerCase() == username.toLowerCase() &&
+          pwd == password
+        ) {
+          document.getElementById("validation").innerHTML = "hello " + uname;
+        } else {
+          document.getElementById("validation").innerHTML =
+            "check your Username or Password";
+          document.getElementById("uname").value = "";
+          document.getElementById("pwd").value = "";
+        }
+      }
+    </script>
+    <a href=""></a>
+  </body>
+</html>
